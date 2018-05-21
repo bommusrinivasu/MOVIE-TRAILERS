@@ -17,7 +17,7 @@ Modern browser
 
 Python packages:cgi model
 
-Local development
+Local development:
 step1:Clone this Repository.
 
 step2:Change the directory.
