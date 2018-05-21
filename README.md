@@ -18,14 +18,14 @@ Modern browser
 Python packages:cgi model
 
 Local development
-Clone this Repository.
+step1:Clone this Repository.
 
-Change the directory.
+step2:Change the directory.
 
-Run the enter.py file on python 3.6.5 idle.
+step3:Run the enter.py file on python 3.6.5 idle.
 
-A html file is created on running the python file.
+step4:A html file is created on running the python file.
 
-You can also run the html file on your favourite browser.
-(firefox,googlechrome,etc)
+step5:You can also run the html file on your favourite browser.
+      (firefox,googlechrome,etc)
 
