@@ -179,7 +179,7 @@ data-toggle="style" data-target="#trailer">
     </div>
 '''
 
-
+#To open the youtube video  
 def create_movie_tiles_content(movies):
     content = ''
     for movie in movies:
@@ -196,7 +196,7 @@ def create_movie_tiles_content(movies):
          )
         return content
 
-
+#To open the fresh_tomatoes.html file
 def open_movies_page(movies):
     output_file = open('fresh_tomatoes.html', 'w')
 
