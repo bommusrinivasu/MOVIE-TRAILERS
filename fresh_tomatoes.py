@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 import webbrowser
 import os
 import re
@@ -10,9 +11,7 @@ main_page_head = '''
 <head >
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Movie trailers</title>
-
    <style>
-
     .style {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -30,14 +29,12 @@ body {
             padding-top: 80px;
             background-image: url("http://wallpapercave.com/wp/m9dpOvQ.jpg");
         }
-
 .style-content {
     margin: 5% auto; /* 5% from the top and centered */
     padding: 20px;
     width: 60%; /* Could be more or less, depending on screen size */
     min-height:315px;
 }
-
 /* The Close Button */
 .close {
     color: #aaa;
@@ -45,7 +42,6 @@ body {
     font-size: 28px;
     font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
     background-color: black;
@@ -90,33 +86,26 @@ body {
        .v3{width:40%;}
        .v4{width:40%;}
        .v5{width:40%;}
-
       h1{
          background-color:none;
          font-family:arial,cursive;
          }
-
     }
     </style>
    <div>
          <div id="myStyle" class="style">
-
            <div class="style-content">
                 <span class="close">&times;</span>
    <iframe id="f" width="100%" height="315" src=""
     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
-
         </div>
 </div>
-
    <script>
    // Get the style
 var style = document.getElementById('myStyle');
-
 // Get the <span> element that closes the style
 var span = document.getElementsByClassName("close")[0];
-
 // When the user clicks on the button, open the style
     onc = function(c) {
     style.style.display = "block";
@@ -124,7 +113,6 @@ var span = document.getElementsByClassName("close")[0];
     console.log(c);
     document.getElementById("f").setAttribute("src",c);
 }
-
 // When the user clicks on <span> (x), close the style
     span.onclick = function() {
         style.style.display = "none";
@@ -141,7 +129,6 @@ span.onclick = function(){
             iframe.src = iframe.src;
             style.style.display = "none";
         }
-
 </script>
 </head>
 '''
@@ -167,7 +154,6 @@ main_page_content = '''
    src="https://bit.ly/2IRCCTZ" style="width:60%" height="300"  hspace="30">
   <h2 style = "color:white;">Jab harry met segal</h2></div>
 </body>
-
 </html>
 '''
 movie_tiles_content = '''
@@ -179,7 +165,9 @@ data-toggle="style" data-target="#trailer">
     </div>
 '''
 
-#To open the youtube video  
+# To open the youtube video
+
+
 def create_movie_tiles_content(movies):
     content = ''
     for movie in movies:
@@ -189,14 +177,16 @@ def create_movie_tiles_content(movies):
             r'(?<=be/)[^&#]+', movie.trailer_youtube_url)
         trailer_youtube_id = (youtube_id_match.group(0) if youtube_id_match
                               else None)
-        content+= movie_tiles_content.format(
+        content + = movie_tiles_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
          )
         return content
 
-#To open the fresh_tomatoes.html file
+# To open the fresh_tomatoes.html file
+
+
 def open_movies_page(movies):
     output_file = open('fresh_tomatoes.html', 'w')
 
