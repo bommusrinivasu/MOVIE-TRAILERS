@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Movie trailers</title>
+
+   <style>
+
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top:100px;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    width: 560px; /* Could be more or less, depending on screen size */
+    min-height:500px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    background-color: black;
+    text-decoration: none;
+    cursor: pointer;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+      .container{
+        display: flex;
+        flex-wrap:wrap;
+        font-family:arial,cursive;
+       }
+     .box{
+          width:100%;
+          min-height:150px;
+          cursor:pointer;
+        }
+      @media screen and (min-width :450px)  {
+      div.v1:hover{
+             border:1px;
+             background-color:skyblue;
+             }
+       div.v2:hover{
+             border:1px;
+             background-color:skyblue;
+             }
+       div.v3:hover{
+             border:1px;
+             background-color:skyblue;
+             }  
+       div.v4:hover{
+             border:1px;
+             background-color:skyblue;
+             }  
+       .v1{width:50%;}
+       .v2{width:50%;}
+       .v3{width:50%;}
+       .v4{width:50%;}
+       h1 {background-color:black;
+           }
+        
+      h1 {background-color:black;
+         font-family:arial,cursive;
+       }
+    }
+
+      </style>
+</head>
+
+<body style="text-align:center">
+   <h1 style="color:white">MOVIE TRAILERS</h1>
+   <p>click on the below link to play the trailers</p>
+   <div class="container">
+   <div class="box v1" onclick="onc('97h9fBWltBM')"> <img vspace="30" src="p1.jpeg" style="width:60%"height="300" hspace="30";><h2 style="color:white;">Agnatavasi</h2></div> 
+   <div class="box v2" onclick="onc('sueMmTm-M4Y')"> <img vspace="30" src="do.jpeg" style="width:60%"height="300" hspace="30"><h2 style="color:white;">Rangastalam</h2></div>
+   <div class="box v3" onclick="onc('KMWS5y2gZ6E')"> <img vspace="30" src="down.jpeg" style="width:60%" height="300" hspace="30"><h2 style="color:white;">Bharat ane nenu</h2>  </div>   
+   <div class="box v4" onclick="onc('vWD6kUP9RTY')"> <img vspace="30" src="pa.jpeg" style="width:60%"height="300"  hspace="30"><h2 style="color:white;">Gang</h2></div>
+
+
+<div>
+      <!-- The Modal -->
+         <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+           <div class="modal-content">
+                <span class="close">&times;</span>
+                 <iframe id="f" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          
+        </div>
+</div>
+   
+   <script>
+   // Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+    onc = function(c) {
+    modal.style.display = "block";
+    c='https://www.youtube.com/embed/'+c;
+    console.log(c);
+    document.getElementById("f").setAttribute("src",c);
+}
+
+// When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+} 
+
+// When the user clicks anywhere outside of the modal, close it
+   window.onclick = function(event) {
+       if (event.target == modal) {
+          modal.style.display = "none";
+    } 
+}
+</script> 
+   
+</body>
+
+</html>
